@@ -21,10 +21,6 @@ public abstract class JobField {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public static int getNextId() {
         return nextId;
     }
@@ -52,5 +48,10 @@ public abstract class JobField {
     @Override
     public int hashCode() {
         return Objects.hash(id, value);
+    }
+
+    @Override
+    public String toString() {
+        return value;
     }
 }
